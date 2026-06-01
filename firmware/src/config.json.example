@@ -1,0 +1,18 @@
+{
+    "wifi": {
+        "ssid": "NOME_DA_SUA_REDE_WIFI",
+        "pswd": "SENHA_DA_SUA_REDE_WIFI"
+    },
+    "mqtt": {
+        "id_cliente": "estacao_meteorologica_01",
+        "broker": "ip_ou_url_do_broker_mqtt_ex_192.168.1.100",
+        "topico": "projeto/estacao/dados",
+        "token": "seu_token_de_autenticacao_aqui_se_necessario"
+    },
+    "pinos": {
+        "dht": 4,
+        "sda": 21,
+        "scl": 22,
+        "onewire": 5
+    }
+}
