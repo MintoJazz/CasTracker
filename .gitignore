@@ -1,20 +1,44 @@
-# Ambientes Virtuais
+# =========================
+# 1. Segredos e Configurações
+# =========================
+# Ignora o arquivo real de senhas, já que o config.json.example já está versionado
+config.json
+*.env
+.env
+
+# =========================
+# 2. Python / MicroPython (Backend e Firmware)
+# =========================
+# Ignora cache compilado (MUITO IMPORTANTE)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignora os ambientes virtuais (que os seus scripts setup_venv.bat vão criar)
 venv/
 .venv/
 env/
+ENV/
 
-# Python
-__pycache__/
-*.pyc
+# =========================
+# 3. Hardware CAD (Eagle)
+# =========================
+# O Eagle gera muitos arquivos temporários e de backup a cada salvamento
+*.b#*
+*.s#*
+*.l#*
+*.erc
+*.epf
+*.pro
 
-# IDEs
-.vscode/
-.idea/
+# =========================
+# 4. IDEs e Sistema Operacional
+# =========================
+# Ignora arquivos de sistema do Windows e Mac
+Thumbs.db
+.DS_Store
 
-# Hardware
-*-backups/
-*.fp-info-cache
-
-# Configurações Sensíveis
-config.json
-.env
+# Opcional: Ignorar lixo do VS Code, mas manter os workspaces que vocês já usam
+.vscode/*
+!.vscode/settings.json
+*.code-workspace
